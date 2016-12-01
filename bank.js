@@ -33,6 +33,14 @@ Bank.prototype = {
       return largestAccount;
     })
     return largestAccount;
+  },
+  totalAccountBalances: function(){
+    var total = 0;
+
+    this.accounts.forEach(function(account){
+      total += account.balance;
+    });
+    return total;
   }
 
 };
