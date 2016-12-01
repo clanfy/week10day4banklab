@@ -25,9 +25,9 @@ Bank.prototype = {
     return foundAccount;
   },
   findLargestAccount: function(){
-    var largestAccount = this.accounts.reduce(function(largestAccount, account){
+    var largestAccount = this.accounts.reduce( function(largestAccount, account ){
 
-      if (account.balance > largestAccount.balance){
+      if ( account.balance > largestAccount.balance ){
         return account;
       }
       return largestAccount;
@@ -37,7 +37,7 @@ Bank.prototype = {
   totalAccountBalances: function(){
     var total = 0;
 
-    this.accounts.forEach(function(account){
+    this.accounts.forEach( function( account ){
       total += account.balance;
     });
     return total;
@@ -45,8 +45,20 @@ Bank.prototype = {
   accountBalancesAverage: function(){
     var accountsTotal = this.totalAccountBalances();
     var numberOfAccounts = this.numberOfAccounts();
-    return (accountsTotal/numberOfAccounts).toFixed(2);
+    return ( accountsTotal/numberOfAccounts ).toFixed(2);
+  },
+  totalValueOfAccountType: function(type){
+    totalOfTypes = 0;
+    
+    var typeArray = this.accounts.filter( function(account){ 
+        return account.type === type;
+    });
+     typeArray.forEach(function(account){
+      totalOfTypes += account.balance;
+     });
+     return totalOfTypes;
   }
+
 
 };
 

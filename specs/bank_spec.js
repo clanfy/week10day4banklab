@@ -58,7 +58,7 @@ describe( "Bank", function() {
   });
 
   it("should return totalValueOfAccountType()", function(){
-    assert.equal(5134.76, myPopulatedBank.totalValueOfAccountType());
+    assert.equal(5134.76, myPopulatedBank.totalValueOfAccountType("pleasure"));
   })
 
 });
