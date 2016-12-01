@@ -49,4 +49,8 @@ describe( "Bank", function() {
     assert.equal( cookiesAccount, largestAccount );
   });
 
+  it("should return totalAccountBalances()", function(){
+    assert.equal(128603.26, myPopulatedBank.totalAccountBalances());
+  })
+
 });

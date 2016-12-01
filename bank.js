@@ -34,6 +34,7 @@ Bank.prototype = {
     })
     return largestAccount;
   }
+
 };
 
 module.exports = Bank;
