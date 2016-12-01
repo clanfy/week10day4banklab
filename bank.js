@@ -41,6 +41,11 @@ Bank.prototype = {
       total += account.balance;
     });
     return total;
+  },
+  accountBalancesAverage: function(){
+    var accountsTotal = this.totalAccountBalances();
+    var numberOfAccounts = this.numberOfAccounts();
+    return (accountsTotal/numberOfAccounts).toFixed(2);
   }
 
 };

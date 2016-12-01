@@ -54,7 +54,7 @@ describe( "Bank", function() {
   });
 
   it("should return accountBalancesAverage()", function(){
-    assert.equal(32150.82, myPopulatedBank.accountBalancesAverage());
-  })
+    assert.equal(32150.81, myPopulatedBank.accountBalancesAverage());
+  });
 
 });
