@@ -51,6 +51,10 @@ describe( "Bank", function() {
 
   it("should return totalAccountBalances()", function(){
     assert.equal(128603.26, myPopulatedBank.totalAccountBalances());
+  });
+
+  it("should return accountBalancesAverage()", function(){
+    assert.equal(32150.82, myPopulatedBank.accountBalancesAverage());
   })
 
 });
